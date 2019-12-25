@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+*.swp
+
+*.retry
+
+.env
+_env
+
+*.db

@@ -1,0 +1,16 @@
+body {
+  background-color: #CAE4DB;
+}
+
+p.smallcaps {
+  font-variant: small-caps;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
