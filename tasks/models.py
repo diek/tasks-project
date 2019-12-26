@@ -4,14 +4,18 @@ from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from phonenumber_field.modelfields import PhoneNumberField
 
+from .managers import CustomUserManager
+
 
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    phone = PhoneNumberField(default='19020000000)')
+    phone_number = PhoneNumberField(default='19020000000)')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
 
     def __str__(self):
         return self.email
