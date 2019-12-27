@@ -9,18 +9,14 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = CustomUser
-    list_display = (
-        "email",
-        "is_staff",
-        "is_active",
-    )
+    list_display = ("email", "first_name", "last_name", "is_staff", "is_superuser", "phone_number",)
     list_filter = (
         "email",
         "is_staff",
         "is_active",
     )
     fieldsets = (
-        (None, {"fields": ("email", "password", "phone_number")}),
+        (None, {"fields": ("email", "password")}),
         ("Permissions", {"fields": ("is_staff", "is_active")}),
     )
     add_fieldsets = (
@@ -28,14 +24,7 @@ class CustomUserAdmin(UserAdmin):
             None,
             {
                 "classes": ("wide",),
-                "fields": (
-                    "email",
-                    "password1",
-                    "password2",
-                    "is_staff",
-                    "is_active",
-                    "phone_number",
-                ),
+                "fields": ("email", "password1", "password2", "first_name", "last_name", "is_staff", "is_active", "phone_number",),
             },
         ),
     )
@@ -44,10 +33,13 @@ class CustomUserAdmin(UserAdmin):
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
+# list_display = ("email", "first_name", "last_name", "is_staff", "is_superuser", "phone_number",)
 
 
 class TaskAdmin(admin.ModelAdmin):
-    fields = ['task', 'user', 'created', 'notes', 'completed']
+    fields = ["task", "user", "notes", "created", "completed"]
+    readonly_fields = ("created",)
+    list_display = ("task", "user", "notes", "created", "completed")
 
 
 admin.site.register(Task, TaskAdmin)

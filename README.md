@@ -9,7 +9,7 @@
 `$: python3 -m venv _env`  
 `$: source _env/bin/activate`  
 `$: pip install --upgrade pip`  
-`$: pip install -R requirements.txt`  
+`$: pip install requirements.txt`  
 
 ## Run migrations  
 `$: python3 manage.py migrate tasks`  

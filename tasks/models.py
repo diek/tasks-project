@@ -10,7 +10,7 @@ from .managers import CustomUserManager
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(_('email address'), unique=True)
-    phone_number = PhoneNumberField(default='19020000000')
+    phone_number = PhoneNumberField(default='+19020000000')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
@@ -26,7 +26,7 @@ class Task(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     notes = models.TextField()
-    completed = models.DateTimeField(null=True)
+    completed = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.task
