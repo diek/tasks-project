@@ -1,0 +1,74 @@
+[
+{
+  "model": "tasks.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$WQ78FPiK9VUP$TcBtlB3/0qAYLgR+stv8wdKPN50oHM39XMVlgtaz1Lk=",
+    "last_login": "2019-12-27T16:50:21.107Z",
+    "is_superuser": true,
+    "first_name": "Derrick",
+    "last_name": "Kearney",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-27T16:46:13.001Z",
+    "email": "diek@derrick.ca",
+    "phone_number": "+19020000000",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tasks.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$hg5LdCOJ0yfj$2xw479FiWqRBIJcPpb7abX/rQegP1be2DpFXzFIgBBs=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Justin",
+    "last_name": "Mayhew",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-12-28T03:24:40.063Z",
+    "email": "justin@mayhew.com",
+    "phone_number": "+19028175555",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tasks.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$OUp7rH1BjCRW$bBDp/nX1KeAqrCMa7Brv2Kq7C3EQeZmhWIxE8rzPa2Q=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Brent",
+    "last_name": "Moses",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2019-12-28T03:26:35.196Z",
+    "email": "brent@bacon.com",
+    "phone_number": "+12125552368",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tasks.customuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$Wyy8hbuiD80m$Se8oNFaLXZuHaDfAU3iuZweWlTKsFvVJ6+BzNcV/FYI=",
+    "last_login": "2019-12-28T02:52:31.054Z",
+    "is_superuser": true,
+    "first_name": "Marco",
+    "last_name": "Turk",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-12-28T02:43:00.874Z",
+    "email": "marco.py@yahoo.com",
+    "phone_number": "+19020000000",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
