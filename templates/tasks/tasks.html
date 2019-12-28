@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block title %}Tasks Complete{% endblock %}
+
+{% block content %}
+  <h2>Tasks Complete</h2>
+
+  {% if all_tasks %}
+      <ul>
+      {% for task in all_tasks %}
+          <li><a href="/tasks/{{ task.id }}/">{{ task.task }}</a> {{ task.created }} {{ task.user }} {{ task.notes }} {{ task.completed }}
+      {% endfor %}
+      </ul>
+  {% else %}
+      <p>No tasks are available.</p>
+  {% endif %}
+
+{% endblock content %}
