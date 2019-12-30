@@ -1,4 +1,10 @@
 ## Tasks Project  
+Simple Learning project
+
+## Tools Used
+1. Python 3.7
+2. Django 2.2.9
+3. SQLite3
 
 
 ## Git Clone the project and cd into project 
@@ -13,9 +19,9 @@ Move to a working directory on your computer, and open terminal.
 `$: pip install -r requirements.txt`  
 
 ## Run migrations  
-`$: python3 manage.py migrate tasks`  
-`$: python3 manage.py migrate`  
+`$: python manage.py migrate tasks`  
+`$: python manage.py migrate`  
 
 ## Load Initial Data  
-`$: python3 manage.py loaddata user_data.json`  
-`$: python3 manage.py loaddata user_data.json`    
+`$: python manage.py loaddata user_data.json`  
+`$: python manage.py loaddata task_data.json`    
