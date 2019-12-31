@@ -4,10 +4,7 @@
     "pk": 1,
     "fields": {
       "task": "Learn CSS and Responsive Design",
-      "user": 1,
-      "created": "2019-12-27T16:51:12.649Z",
-      "notes": "All modern websites need responsive design",
-      "completed": null
+      "notes": "All modern websites need responsive design"
     }
   },
   {
@@ -15,10 +12,7 @@
     "pk": 2,
     "fields": {
       "task": "Design client solution",
-      "user": 2,
-      "created": "2019-12-27T16:51:12.649Z",
-      "notes": "make sure clean code, and best practises",
-      "completed": null
+      "notes": "make sure clean code, and best practises"
     }
   },
   {
@@ -26,10 +20,7 @@
     "pk": 3,
     "fields": {
       "task": "Email updates to team",
-      "user": 2,
-      "created": "2019-12-27T17:55:12.649Z",
-      "notes": "Ensure everyone replies",
-      "completed": null
+      "notes": "Ensure everyone replies"
     }
   },
   {
@@ -37,10 +28,7 @@
     "pk": 4,
     "fields": {
       "task": "Send out meeting request",
-      "user": 2,
-      "created": "2019-12-27T17:11:12.649Z",
-      "notes": "Use Slack",
-      "completed": null
+      "notes": "Use Slack"
     }
   },
   {
@@ -48,10 +36,7 @@
     "pk": 5,
     "fields": {
       "task": "Book conference room",
-      "user": 1,
-      "created": "2019-12-27T18:41:12.649Z",
-      "notes": "Pick a nice room",
-      "completed": null
+      "notes": "Pick a nice room"
     }
   },
   {
@@ -59,10 +44,7 @@
     "pk": 6,
     "fields": {
       "task": "Create agenda for client meeting",
-      "user": 3,
-      "created": "2019-12-27T18:53:12.649Z",
-      "notes": "Consult with Derrick",
-      "completed": null
+      "notes": "Consult with Derrick"
     }
   },
   {
@@ -70,10 +52,7 @@
     "pk": 7,
     "fields": {
       "task": "Create Digital Ocean droplet for webserver",
-      "user": 1,
-      "created": "2019-12-28T19:54:12.649Z",
-      "notes": "Start with cheap option",
-      "completed": null
+      "notes": "Start with cheap option"
     }
   },
   {
@@ -81,10 +60,7 @@
     "pk": 8,
     "fields": {
       "task": "Buy more pecans",
-      "user": 3,
-      "created": "2019-12-28T20:34:12.649Z",
-      "notes": "Make sure they are fresh",
-      "completed": null
+      "notes": "Make sure they are fresh"
     }
   },
   {
@@ -92,10 +68,7 @@
     "pk": 9,
     "fields": {
       "task": "Confirm details of the Sales Agreement",
-      "user": 2,
-      "created": "2019-12-28T20:44:12.649Z",
-      "notes": "Confirm all technical details agreed and/or discussed.",
-      "completed": null
+      "notes": "Confirm all technical details agreed and/or discussed."
     }
   },
   {
@@ -103,10 +76,7 @@
     "pk": 10,
     "fields": {
       "task": "Review of the internal architecture",
-      "user": 4,
-      "created": "2019-12-28T20:56:12.649Z",
-      "notes": "Second opinion. Use as opportunity for knowledge transfer.",
-      "completed": null
+      "notes": "Second opinion. Use as opportunity for knowledge transfer."
     }
   },
   {
@@ -114,10 +84,7 @@
     "pk": 11,
     "fields": {
       "task": "Watch new Star Wars movie",
-      "user": 4,
-      "created": "2019-12-28T20:58:12.649Z",
-      "notes": "Don't give spoilers",
-      "completed": null
+      "notes": "Don't give spoilers"
     }
   },
   {
@@ -125,10 +92,7 @@
     "pk": 12,
     "fields": {
       "task": "Go to the gym",
-      "user": 10,
-      "created": "2019-12-30T22:22:24.819Z",
-      "notes": "Work out back",
-      "completed": null
+      "notes": "Work out back"
     }
   },
   {
@@ -136,10 +100,7 @@
     "pk": 13,
     "fields": {
       "task": "Pay bills",
-      "user": 3,
-      "created": "2019-12-30T22:23:17.442Z",
-      "notes": "Do it at bank, online did not work last time",
-      "completed": null
+      "notes": "Do it at bank, online did not work last time"
     }
   },
   {
@@ -147,10 +108,7 @@
     "pk": 14,
     "fields": {
       "task": "Buy beef ribs for BBQ",
-      "user": 1,
-      "created": "2019-12-30T22:23:55.242Z",
-      "notes": "Make sure they are meaty",
-      "completed": null
+      "notes": "Make sure they are meaty"
     }
   },
   {
@@ -158,10 +116,7 @@
     "pk": 15,
     "fields": {
       "task": "Read Code Complete",
-      "user": 4,
-      "created": "2019-12-30T22:24:31.375Z",
-      "notes": "Excellent book on Coding",
-      "completed": null
+      "notes": "Excellent book on Coding"
     }
   },
   {
@@ -169,10 +124,7 @@
     "pk": 16,
     "fields": {
       "task": "Organize the office",
-      "user": 31,
-      "created": "2019-12-30T22:25:14.621Z",
-      "notes": "The office is a dump, it needs to be cleaned",
-      "completed": null
+      "notes": "The office is a dump, it needs to be cleaned"
     }
   }
 ]

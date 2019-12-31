@@ -9,10 +9,10 @@ from .managers import CustomUserManager
 
 class CustomUser(AbstractUser):
     username = None
-    email = models.EmailField(_('email address'), unique=True)
-    phone_number = PhoneNumberField(default='+19020000000')
+    email = models.EmailField(_("email address"), unique=True)
+    phone_number = PhoneNumberField(default="+19020000000")
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
@@ -23,13 +23,26 @@ class CustomUser(AbstractUser):
 
 class Task(models.Model):
     task = models.CharField(max_length=50)
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    created = models.DateTimeField(auto_now_add=True)
     notes = models.TextField()
-    completed = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
         return self.task
 
     def get_absolute_url(self):
-        return reverse('task_detail', args=[str(self.id)])
+        return reverse("task_detail", args=[str(self.id)])
+
+
+class UserTask(models.Model):
+    user = models.ForeignKey(
+        "CustomUser", related_name="user_tasks", on_delete=models.SET_NULL, null=True
+    )
+    task = models.ForeignKey(
+        "Task", related_name="user_tasks", on_delete=models.SET_NULL, null=True
+    )
+    created = models.DateTimeField(auto_now_add=True)
+    completed = models.DateTimeField(blank=True, null=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['user', 'task'], name='unique_user_task')
+            ]

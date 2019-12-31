@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserChangeForm, CustomUserCreationForm
-from .models import CustomUser, Task
+from .models import CustomUser, Task, UserTask
 
 
 class CustomUserAdmin(UserAdmin):
@@ -37,9 +37,17 @@ admin.site.register(CustomUser, CustomUserAdmin)
 
 
 class TaskAdmin(admin.ModelAdmin):
-    fields = ["task", "user", "notes", "created", "completed"]
-    readonly_fields = ("created",)
-    list_display = ("task", "user", "notes", "created", "completed")
+    fields = ["task", "notes"]
+    list_display = ("task", "notes")
 
 
 admin.site.register(Task, TaskAdmin)
+
+
+class UserTaskAdmin(admin.ModelAdmin):
+    fields = ["task", "user", "created", "completed"]
+    readonly_fields = ("created",)
+    list_display = ("task", "user", "created", "completed")
+
+
+admin.site.register(UserTask, UserTaskAdmin)
