@@ -8,7 +8,7 @@
   {% if all_tasks %}
       <ul>
       {% for task in all_tasks %}
-          <li><a href="/tasks/{{ task.id }}/">{{ task.task }}</a> {{ task.created }} {{ task.user }} {{ task.notes }} {{ task.completed }}
+          <li><a href="{{ task.id }}/">{{ task.task }}</a> {{ task.notes }}
       {% endfor %}
       </ul>
   {% else %}

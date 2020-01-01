@@ -10,7 +10,7 @@ class HomePageView(TemplateView):
 
 
 def tasks(request):
-    all_tasks = Task.objects.order_by('-created')
+    all_tasks = Task.objects.order_by('-task')
     return render(request, 'tasks/tasks.html', {'all_tasks': all_tasks})
 
 

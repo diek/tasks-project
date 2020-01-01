@@ -33,8 +33,13 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         total = kwargs['total']
+        count = 0
         for i in range(total):
             try:
                 generate_user_task()
             except IntegrityError:
-                print("This user task already exists")
+                count += 1
+        if count:
+            print(f"{total - count } of {total} were created, the user task already existed.")
+        else:
+            print(f"All {total} tasks were created.")
