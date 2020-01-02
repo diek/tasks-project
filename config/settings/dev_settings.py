@@ -1,8 +1,8 @@
-from os.path import abspath, dirname, join
+from pathlib import Path
 
-BASE_DIR = dirname(dirname(abspath(__file__)))
+BASE_DIR = Path(__file__).parents[2]
 
-SECRET_KEY = '=!dj^xvos^4f@l+fb9*x1!6%&i$14x4h=n+nn%9wyulok@)obb'
+SECRET_KEY = 'dj^xvos^4f@l+fb9*x1!6%&i$14x4h=n+nn%9wyulok@)obb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,14 +42,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'tasks_project.urls'
+ROOT_URLCONF = 'config.urls'
 
-FIXTURE_DIRS: [(join(BASE_DIR, 'tasks/fixtures'))]
+FIXTURE_DIRS: [(BASE_DIR.joinpath('tasks/fixtures'))]
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR.joinpath("templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -65,13 +65,12 @@ TEMPLATES = [
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 
-WSGI_APPLICATION = 'tasks_project.wsgi.application'
-
+WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': join(BASE_DIR, 'tasks.db'),
+        'NAME': str(BASE_DIR.joinpath('tasks.db')),
     }
 }
 
@@ -116,5 +115,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    join(BASE_DIR, "static")
+    BASE_DIR.joinpath("static")
 ]

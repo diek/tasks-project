@@ -24,6 +24,13 @@ class CustomUser(AbstractUser):
 class Task(models.Model):
     task = models.CharField(max_length=50)
     notes = models.TextField()
+    created_at = models.DateTimeField(
+        verbose_name=u"Created at",
+        auto_now_add=True
+    )
+    edited_by = models.ForeignKey(
+        "CustomUser", on_delete=models.SET_NULL, null=True
+    )
 
     def __str__(self):
         return self.task
