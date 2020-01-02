@@ -27,10 +27,10 @@ Move to a working directory on your computer, and open terminal.
 `$: python manage.py loaddata task_data.json`    
 `$: python manage.py loaddata user_task_data.json` 
 
-## Generate Users via Management Commands
+## Generate Users via Management Command
 `$: python manage.py populate_users <int:number>`
 
-## Generate User Tasks via Management Commands
+## Generate User Tasks via Management Command
 `$: python manage.py populate_user_tasks <int:number>`
 
 ## ERD of Key Tables
