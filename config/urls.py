@@ -7,7 +7,7 @@ admin.site.site_title = 'Tasks - Admin'
 
 urlpatterns = [
     path('tasks/', include('tasks.urls')),
-    path('admin/', admin.site.urls),
+    path('store/', admin.site.urls),
 ]
 
 if settings.DEBUG:
