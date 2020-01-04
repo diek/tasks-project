@@ -25,3 +25,8 @@ def task(request, task_id):
 def users_tasks(request):
     users_tasks = UserTask.objects.order_by('-user')
     return render(request, 'tasks/users_tasks.html', {'users_tasks': users_tasks})
+
+
+def user_tasks(request, user_id):
+    user_tasks = UserTask.objects.filter(user=user_id)
+    return render(request, 'tasks/user_tasks.html', {'user_tasks': user_tasks})

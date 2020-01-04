@@ -1,20 +1,24 @@
 {% extends '_base.html' %}
 
-{% block title %}User Tasks Complete{% endblock %}
+{% block title %}Users Tasks Complete{% endblock %}
 
 {% block content %}
   <br>
   <br>
   <h2>Users Tasks</h2>
 
-  {% if users_tasks %}
-      <ul>
-      {% for task in users_tasks %}
-          <li>{{ task.user }} {{ task.task }}
-      {% endfor %}
-      </ul>
-  {% else %}
-      <p>No tasks are available.</p>
-  {% endif %}
+  {% regroup users_tasks by user as user_list %}
 
+<ul>
+    {% for user in user_list %}
+        <li><strong>{{ user.grouper }}</strong>
+            <ul>
+            {% for task in user.list %}
+                <li>{{ task.task }}</li>
+            {% endfor %}
+            </ul>
+            <br>
+        </li>
+    {% endfor %}
+</ul>
 {% endblock content %}
