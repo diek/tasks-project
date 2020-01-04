@@ -6,23 +6,23 @@
   <title>Tasks App</title>
   <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
   {% block css %}
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap" rel="stylesheet">
   {% endblock %}
 </head>
 <header>
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://bulma.io">
-      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    <a class="navbar-item" href="{% url 'home' %}">
+      <img src="{% static 'images/T.svg' %}" width="112" height="28">
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
+      <span aria-hidden="true">A</span>
+      <span aria-hidden="true">B</span>
+      <span aria-hidden="true">C</span>
     </a>
   </div>
 
@@ -32,21 +32,24 @@
         Home
       </a>
 
-      <a class="navbar-item">
+<!--       <a class="navbar-item">
         Documentation
-      </a>
+      </a> -->
 
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          App Tasks
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
+          <a class="navbar-item" href="{% url 'tasks' %}">
+            Tasks
           </a>
-          <a class="navbar-item">
-            Contact
+          <a class="navbar-item" href="{% url 'users_tasks' %}">
+            Users' Tasks
+          </a>
+          <a class="navbar-item" href="{% url 'user_tasks' %}">
+            User's Tasks
           </a>
         </div>
       </div>
@@ -75,12 +78,7 @@
     {% endblock content %}
   </div>
   {% block javascript %}
-  <!-- Bootstrap JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-  <!-- 3rd party JavaScript -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
   <!-- Project JS -->
   <script src="{% static 'js/base.js' %}"></script>

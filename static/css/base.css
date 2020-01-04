@@ -1,11 +1,17 @@
 body {
   background-color: #e6dbc9;
   color: #2e3830;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .navbar {
   background-color: #c53211;
   color: #e6dbc9;
+}
+
+h2 {
+  font-family: 'Paytone One', sans-serif;
+  color: #c53211;
 }
 
 p.smallcaps {
