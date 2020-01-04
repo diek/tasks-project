@@ -1,5 +1,11 @@
 body {
-  background-color: #CAE4DB;
+  background-color: #e6dbc9;
+  color: #2e3830;
+}
+
+.navbar {
+  background-color: #c53211;
+  color: #e6dbc9;
 }
 
 p.smallcaps {
