@@ -2,7 +2,7 @@ from django.http import Http404
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
-from .models import Task
+from .models import Task, UserTask
 
 
 class HomePageView(TemplateView):
@@ -20,3 +20,8 @@ def task(request, task_id):
     except Task.DoesNotExist:
         raise Http404("Task does not exist")
     return render(request, 'tasks/task.html', {'task': task})
+
+
+def users_tasks(request):
+    users_tasks = UserTask.objects.order_by('-user')
+    return render(request, 'tasks/users_tasks.html', {'users_tasks': users_tasks})
