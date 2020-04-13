@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Tasks App</title>
-  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
+  <link rel="shortcut icon" href="{% static 'images/favicon2.ico' %}"/>
   {% block css %}
   <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -16,7 +16,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="{% url 'home' %}">
-      <img src="{% static 'images/T.svg' %}" width="112" height="28">
+      <img src="{% static 'images/logo.jpg' %}" width="112" height="28">
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -48,7 +48,7 @@
           <a class="navbar-item" href="{% url 'users_tasks' %}">
             Users' Tasks
           </a>
-          <a class="navbar-item" href="{% url 'user_tasks' %}">
+          <a class="navbar-item" >
             User's Tasks
           </a>
         </div>

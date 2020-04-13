@@ -6,14 +6,14 @@ from django.core.management.base import BaseCommand
 from django.utils import timezone
 from faker import Faker
 
-fake = Faker(['en_CA'])
+fake = Faker(["en_CA"])
 
 
 def get_phone_number():
-    ''' Faker is not consistent when generating phone numbers
-    '''
+    """ Faker is not consistent when generating phone numbers
+    """
     phone = fake.phone_number()
-    phone_number = re.findall(r'[0-9]+', phone)
+    phone_number = re.findall(r"[0-9]+", phone)
 
     if len(phone_number) == 3:
         phone = "".join(phone_number)
@@ -63,18 +63,20 @@ def generate_user():
         last_name=last_name,
         date_joined=timezone.now() + timezone.timedelta(hours=-joined, seconds=-1),
         last_login=timezone.now(),
-        phone_number=phone_number
+        phone_number=phone_number,
     )
     return user
 
 
 class Command(BaseCommand):
-    help = 'Generates x number of users'
+    help = "Indicates the number of users to be created"
 
     def add_arguments(self, parser):
-        parser.add_argument('total', type=int, help='Indicates the number of users to be created')
+        parser.add_argument(
+            "total", type=int, help=help
+        )
 
     def handle(self, *args, **kwargs):
-        total = kwargs['total']
+        total = kwargs["total"]
         for i in range(total):
             generate_user()
