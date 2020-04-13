@@ -3,7 +3,7 @@ Simple Learning project
 
 ## Tools Used
 1. Python 3.7
-2. Django 2.2.9
+2. Django 2.2.12
 3. SQLite3 3.30.1
 4. DBeaver 6.3.1
 
